@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты | Detnerat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="./img/logo.svg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <span>Detnerat</span>
+            </div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="blog.html">Блог</a></li>
+                <li><a href="contact.html" class="active">Контакты</a></li>
+                <li><button id="theme-toggle">🌙</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container page-content">
+        <h1>Свяжитесь с нами</h1>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <h3>Где мы находимся?</h3>
+                <p>📍 ул. Дейка Сити, 1, Токио, Япония, 100-8111
+                </p>
+                <p>📞 +81 50-338-63728</p>
+                <p>✉️ liberation@detnerat.com</p>
+                <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&q=80&w=400" alt="Карта" class="contact-map-img">
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="email" placeholder="Ваш Email" required>
+                <textarea placeholder="Ваше сообщение" rows="5" required></textarea>
+                <button type="submit" class="btn">Отправить</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container"><p>&copy; 2189 Detnetar. Сделано для улучшения вашей жизни.</p></div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

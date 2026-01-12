@@ -1,0 +1,292 @@
+/* Базовые переменные */
+:root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --accent: #193451;
+    --card-bg: #f5f5f5;
+}
+
+[data-theme="dark"] {
+    --bg: #121212;
+    --text: #e0e0e0;
+    --accent: #193451;
+    --card-bg: #1e1e1e;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header & Logo (Исправлено) */
+header {
+    background: var(--bg);
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+/* Фикс размера картинки */
+.logo span {
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+}
+
+.nav-links a.active {
+    color: var(--accent);
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 0;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.hero-image-container {
+    flex: 1;
+}
+
+.main-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    background: var(--accent);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.hero-btns {
+    padding: 20px 0 0 0;
+}
+
+/* МЕДИА-ЗАПРОСЫ (АДАПТИВНОСТЬ) */
+@media (max-width: 768px) {
+
+    /* Навигация превращается в выпадающий список */
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle .bar {
+        display: block;
+        width: 25px;
+        height: 3px;
+        margin: 5px auto;
+        background-color: var(--text);
+        transition: 0.3s;
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: var(--bg);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px 0;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    /* Перестраиваем Hero в колонку */
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-image-container {
+        width: 100%;
+    }
+
+    /* Скрываем кнопку темы из общего ряда на мобилках или адаптируем */
+    #theme-toggle {
+        margin-top: 10px;
+    }
+}
+
+/* Стили для других страниц (Blog/Contact) в мобилке */
+@media (max-width: 480px) {
+
+    .blog-grid,
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+footer {
+    padding: 30px 0;
+    text-align: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+#theme-toggle {
+    background: none;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Адаптивность для страницы "О нас" */
+.about-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 0;
+}
+
+/* --- Вставьте это в css/style.css --- */
+
+/* Обёртка для всей секции контактов (инфо + форма) */
+.contact-wrapper {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+    align-items: flex-start;
+    /* Выравнивание по верху */
+}
+
+/* Сама форма */
+.contact-form {
+    flex: 1;
+    /* Занимает оставшееся пространство */
+    display: flex;
+    flex-direction: column;
+    /* ВАЖНО: выстраивает поля вертикально */
+    gap: 15px;
+    /* Отступ между полями */
+}
+
+/* Стилизация полей ввода */
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(128, 128, 128, 0.3);
+    background: var(--card-bg);
+    /* Используем переменную фона карточек */
+    color: var(--text);
+    /* Используем переменную цвета текста */
+    font-family: inherit;
+    width: 100%;
+    /* Растягиваем на всю ширину контейнера */
+    resize: vertical;
+    /* Разрешаем менять размер textarea только по вертикали */
+}
+
+
+
+/* Адаптивность для блога */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+/* МЕДИА-ЗАПРОСЫ ДЛЯ ВСЕХ СТРАНИЦ */
+@media (max-width: 768px) {
+
+    .about-section,
+    .contact-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image-container,
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-map-img {
+        margin: 20px auto;
+        max-width: 100%;
+    }
+}
