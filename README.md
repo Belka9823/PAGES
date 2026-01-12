@@ -1,4 +1,4 @@
-# ☕️ CyberCafe — Static Web Project
+#  Detnerat — Static Web Project
 
 ![Static Badge](https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square)
 ![GitHub Pages](https://img.shields.io/badge/Deployment-GitHub_Pages-blue?style=flat-square&logo=github)
@@ -12,7 +12,7 @@
 
 ## 📁 Страницы проекта
 1.  **Главная**: Оффер и ключевые преимущества.
-2.  **О нас**: История Dentarat.
+2.  **О нас**: История Detnerat.
 3.  **Блог**: Список новостей.
 4.  **Контакты**: Контактные данные и интерактивная форма.
 
