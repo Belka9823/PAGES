@@ -23,3 +23,4 @@
 
 ## 🚀 Как запустить
 Просто откройте `index.html` в любом браузере или загрузите папку в репозиторий GitHub для автоматического деплоя через **GitHub Pages**.
+<img width="1916" height="860" alt="изображение" src="https://github.com/user-attachments/assets/11f4468c-fe9a-4b61-951c-547fe7a79067" />
